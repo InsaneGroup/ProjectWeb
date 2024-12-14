@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Sharing</title>
+    <title>Categories2</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/recipes.css">
+    <link rel="stylesheet" href="../css/catogories.css">
 </head>
 <body>
     
@@ -33,43 +33,45 @@
     </header>
 
 
-    <section id="recipe1">
-        <div class="filter"></div>
 
-        <div class="title-container">
-            <h2>Find recipes</h2>
-            <p>Let us help you create the perfect meal!</p>
-        </div>
-
-        <div class="search-container">
-            <input type="text" placeholder="Find recipes...">
-            <a><i class='bx bx-search'></i> Search</a>
-        </div>
-
-    </section>
-    
-   
-    <template id="category-template">
-        <div  class="category-container">
+    <template id="recipe-info">
+        <div class="recipe-info-container">
             <div class="img-container">
-                <img src="">
+                <img src="" loading="lazy">
             </div>
             <div class="content">
-                <h3></h3>
+                <p id="category-name"></p>
+                <h3 id="recipe-name"></h3>
+                <!-- <img src="https://flagcdn.com/w320/vn.png"> -->
             </div>
-       </div>
+        </div>
     </template>
 
+    
+    
+    <section id="category-section">
+        <div class="our-category">
+            <a href="./recipes.html" id="back-btn"><i class='bx bx-arrow-back'></i></a>
+            <a href="./recipes.html" id="bread1">Our categories</a>
+            <div>/</div>
+            <a id="title" href="./categories2.html" onclick="clearRecipeName()"></a>
+            <!-- <div>/</div> -->
+            <a id="title2"></a>
+        </div>
+        <div class="category-container">
+                
+            
 
-    <section id="recipe2">
-        <h2>Our categories</h2>
-        <div class="category">
-           
+
+
 
         </div>
-
-
     </section>
+   
+   
+
+
+   
 
 
 
@@ -139,5 +141,5 @@
    </footer>
 
 </body>
-<script src="../js/category.js" type="module"></script>
+<script src="../js/category2.js" type="module"></script>
 </html>

@@ -13,18 +13,27 @@ const templateRecipe = $('#recipe-template')
 const main_row = $$('.main-row')
 const nav_tabs = $$('.nav-tab')
 
-console.log(nav_tabs);
+const recipeNameHome = []
+const categoryNameHome = []
+
 
 
 
 
 nav_tabs.forEach((tab, index)=>
 {
+
+    localStorage.setItem('categoryName', JSON.stringify([]))
+    localStorage.setItem('recipeName', JSON.stringify([" "]))
+    localStorage.setItem('categoryNameHome', JSON.stringify([]))
+    localStorage.setItem('recipeNameHome', JSON.stringify([" "]))
+
     tab.addEventListener('click', function()
     {
         $('.nav-tab.active').classList.remove('active')
         
         this.classList.add('active')
+
     })
 })
 
@@ -108,10 +117,10 @@ const slideDot = ()=>
         {
             dots.forEach(function(dot, dotIndex)
             {
-                dot.style.backgroundColor = 'rgb(150, 150, 150)'
+                dot.style.backgroundColor = 'var(--c5)'
                 if(dotIndex === index)
                 {        
-                    dot.style.backgroundColor = 'rgb(11, 4, 22)'
+                    dot.style.backgroundColor = 'var(--c1)'
                 }
             })    
         }
@@ -140,7 +149,7 @@ async function  getMeal(name)
    }
 }
 
-async function  showRecipeInHome3() 
+async function showRecipeInHome3() 
 {
     try
    {
@@ -153,6 +162,25 @@ async function  showRecipeInHome3()
             recipe.querySelector('.recipe').style.backgroundImage = `url(${data.meals[0].strMealThumb})`
             recipe.querySelector('#recipe-title').innerText = data.meals[0].strMeal
             recipe.querySelector('#recipe-info').innerText = data.meals[0].strTags
+
+            recipe.querySelector('#recipe-view').addEventListener('click', function()
+            {
+                if(recipeNameHome.length === 0)
+                {
+                    recipeNameHome.push(data.meals[0].strMeal)
+                    categoryNameHome.push(data.meals[0].strCategory)
+                }else 
+                {
+                    recipeNameHome.splice(0,1)
+                    categoryNameHome.splice(0,1)
+                    recipeNameHome.push(data.meals[0].strMeal)
+                    categoryNameHome.push(data.meals[0].strCategory)
+                }
+                localStorage.setItem('recipeNameHome', JSON.stringify(recipeNameHome))
+                localStorage.setItem('categoryNameHome', JSON.stringify(categoryNameHome))
+                window.location.href = './assets/html/singleRecipeInfo.html'
+            })
+            
             
             row.appendChild(recipe)
             
@@ -166,4 +194,10 @@ async function  showRecipeInHome3()
 }
 
 
+
+
+
+
 showRecipeInHome3()
+
+

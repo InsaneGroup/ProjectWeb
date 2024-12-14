@@ -13,3 +13,6 @@ https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood (filter by category
 https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian (filter by Area)
 
 https://www.themealdb.com/api/json/v1/1/categories.php (list all meal categories)
+
+https://restcountries.com/v3.1/all?fields=name,flags (flag api)
+
