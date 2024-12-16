@@ -133,9 +133,35 @@ body::-webkit-scrollbar-track
     text-decoration: none;
 }
 
+.nav-container #login-btn.active
+{
+    display: none;
+}
+
 .nav-container #login-btn:hover
 {
     color: var(--c6);
+}
+
+.nav-container #user
+{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--c2);
+    border: none;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-container #user.active
+{
+    display: flex;
 }
 
 /* <--------------------------------------------------------------------------------------------------------------->*/

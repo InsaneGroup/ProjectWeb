@@ -26,7 +26,12 @@ const instruction_section = $('#instruction-section')
 const instruction_container = $('.instruction-container')
 const left_instruction = $('#left-instruction')
 const right_instruction = $('#right-instruction')
+const inputRecipe = $('#input-find')
 
+document.body.addEventListener('keydown', ()=>
+{
+    inputRecipe.focus()
+})
 
 
 
