@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Sharing-Categories</title>
+    <title>Recipe Sharing-Contact Us</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    
+
     <header class="header">
 
         <div class="content-header">
@@ -19,11 +21,11 @@
             <div class="nav-container">
                 <nav class="header-nav">
                     <a href="../../index.html" class="nav-tab">home</a>
-                    <a href="./recipes.html" class="nav-tab active">recipes</a>
+                    <a href="./recipes.html" class="nav-tab">recipes</a>
                     <a href="./blog.html" class="nav-tab">blog</a>
-                    <a href="./contact.html" class="nav-tab">contact us</a>
+                    <a href="./contact.html" class="nav-tab active">contact us</a>
                 </nav>
-    
+
                 <a href="../html/login.html" id="login-btn">Login</a>
                 <a href="#" id="user"><i class='bx bx-user-circle'></i></a>
             </div>
@@ -31,63 +33,60 @@
         </div>
 
     </header>
-
-
-
-    <template id="recipe-info">
-        <div class="recipe-info-container">
-            <div class="img-container">
-                <img src="" loading="lazy">
-            </div>
-            <div class="content">
-                <p id="category-name"></p>
-                <h3 id="recipe-name"></h3>
-                <!-- <img src="https://flagcdn.com/w320/vn.png"> -->
-            </div>
+    <section id="contact">
+        <div id="background">
         </div>
-    </template>
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p>We would love to hear from you! Fill out the form below and we'll get back to you as soon as
+                    possible.</p>
+            </div>
 
-    
-    
-    <section id="category-section">
-        <div class="our-category">
-            <a href="./recipes.html" id="back-btn"><i class='bx bx-arrow-back'></i></a>
-            <a href="./recipes.html" id="bread1">Our categories</a>
-            <div>/</div>
-            <a id="title" href="./catagories.html"></a>
-            <!-- <div>/</div> -->
-            <a id="title2"></a>
-        </div>
-        <div class="category-container">
-                
-            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Our Contact Details</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Thu Duc, Ho Chi Minh City, Viet Nam</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+012 345 678</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact@gmail.com</p>
+                    </div>
+                </div>
 
 
-
-
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
-   
-   
-
-
-   
 
 
 
 
+    <footer class="footer">
 
-   <footer class="footer">
 
-        
 
         <div class="top-footer">
             <div class="filter"></div>
             <div class="top-logo-content">
-               <div class="container">
+                <div class="container">
                     <div id="logo">BiteDelight</div>
                     <p>Sologan company</p>
-               </div>
+                </div>
             </div>
 
             <div class="top-content">
@@ -127,8 +126,8 @@
             <div class="part">
                 <div class="icon-container">
                     <div class="icon"><i class='bx bxl-facebook'></i></div>
-                    <div class="icon"><i class='bx bxl-twitter' ></i></div>
-                    <div class="icon"><i class='bx bx-wifi' ></i></div>
+                    <div class="icon"><i class='bx bxl-twitter'></i></div>
+                    <div class="icon"><i class='bx bx-wifi'></i></div>
                     <div class="icon"><i class='bx bxl-google'></i></div>
                     <div class="icon"><i class='bx bx-dots-horizontal-rounded'></i></div>
                 </div>
@@ -138,9 +137,9 @@
             </div>
         </div>
 
-   </footer>
+    </footer>
 
 </body>
+<script src="../js/contact.js" type="module"></script>
 
-<script src="../js/category.js" type="module"></script>
 </html>

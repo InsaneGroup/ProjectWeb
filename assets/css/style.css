@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+@import 'catogories.css';
+@import 'recipe_search.css';
+@import 'recipeInfo.css';
+@import 'recipes.css';
+@import 'singleRecipeInfo.css';
+@import 'about.css';
+@import 'blog.css';
+@import 'contact.css';
+
 *
 {
     padding: 0;
@@ -12,7 +21,8 @@
 :root
 {
     --c1: #151419;
-    --c2: #f56e0f;
+    --c2: #f87313;
+    /* --c2: #FF6F3C; */
     --c3: #1b1b1e;
     --c4: #262626;
     --c5: #878787;
@@ -55,9 +65,10 @@ body::-webkit-scrollbar-track
     align-items: center;
     width: 100%;
     height: 10vh;
-    background-color: rgba(0,0,0,0.6);
-    position: absolute;
-    z-index: 10;
+    background-color: var(--c1);
+    position: relative;
+    z-index: 100;
+    top: 0;
 }
 
 .header .logo

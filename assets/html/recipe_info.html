@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>Recipe Sharing-Categories</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/singleRecipeInfo.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     
@@ -20,12 +20,12 @@
                 <nav class="header-nav">
                     <a href="../../index.html" class="nav-tab">home</a>
                     <a href="./recipes.html" class="nav-tab active">recipes</a>
-                    <a href="#" class="nav-tab">about us</a>
-                    <a href="#" class="nav-tab">blog</a>
-                    <a href="#" class="nav-tab">contact us</a>
+                    <a href="./blog.html" class="nav-tab">blog</a>
+                    <a href="./contact.html" class="nav-tab">contact us</a>
                 </nav>
     
                 <a href="../html/login.html" id="login-btn">Login</a>
+                <a href="#" id="user"><i class='bx bx-user-circle'></i></a>
             </div>
 
         </div>
@@ -33,7 +33,9 @@
     </header>
 
 
-    
+
+   
+
     
     
     <section id="category-section">
@@ -41,14 +43,9 @@
             <a href="./recipes.html" id="back-btn"><i class='bx bx-arrow-back'></i></a>
             <a href="./recipes.html" id="bread1">Our categories</a>
             <div>/</div>
-            <a id="title" href="./categories2.html" onclick="clearRecipeName()"></a>
+            <a id="title" href="./catagories.html"></a>
             <div>/</div>
             <a id="title2"></a>
-        </div>
-
-        <div class="category-container">
-                
-
         </div>
     </section>
    
@@ -65,9 +62,9 @@
         </div>
 
         <div class="recipe-content">
-            <h2 id="name">Christmas Pudding Trifle</h2>
-            <div id="cate"><ion-icon name="fast-food"></ion-icon> Dessert</div>
-            <div id="area"><ion-icon name="location"></ion-icon> British</div>
+            <h2 id="name"></h2>
+            <div id="cate"><ion-icon name="fast-food"></ion-icon> </div>
+            <div id="area"><ion-icon name="location"></ion-icon> </div>
             <a href="#ingredient-section" id="ingredient"><ion-icon name="eye"></ion-icon> View ingredients</a>
             <a href="#instruction-section" id="instruction"><ion-icon name="eye"></ion-icon> View instructions</a>
             <div id="rating">
@@ -146,6 +143,9 @@
 
 
    <footer class="footer">
+
+        
+
         <div class="top-footer">
             <div class="filter"></div>
             <div class="top-logo-content">
@@ -208,6 +208,5 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="../js/singleRecipe.js" type="module"></script>
- <!-- <script src="../js/category.js"></script> -->
+<script src="../js/category.js" type="module"></script>
 </html>

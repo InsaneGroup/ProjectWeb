@@ -33,7 +33,44 @@ const categoryNameHome = JSON.parse(localStorage.getItem('categoryNameHome')) ||
 // console.log("recipeName: " + recipeName);
 // console.log("recipeNameHome: " + recipeNameHome);
 
+const loginButton = $('#login-btn')
+const userBtn = $('#user')
+let loginState = JSON.parse(localStorage.getItem('loginState')) || false
 
+
+
+
+
+
+
+
+
+function checkLogin()
+{
+        if(loginState)
+        {
+            loginButton.classList.add('active')
+            userBtn.classList.add('active')
+        }else
+        {
+            loginButton.classList.remove('active')
+            userBtn.classList.remove('active')
+        }
+}
+checkLogin()
+
+
+if(userBtn)
+{
+    userBtn.addEventListener('click', ()=>
+    {
+       if(confirm('Log out?'))
+       {
+            localStorage.setItem('loginState', JSON.stringify(loginState=false))
+            checkLogin()
+       }
+    })
+}
 
 
 

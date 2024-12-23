@@ -22,16 +22,81 @@ let imgRecipe, nameRecipe, areaRecipe, cateRecipe
 
 const recipe_content = $('.recipe-content')
 
+
 const instruction_section = $('#instruction-section')
 const instruction_container = $('.instruction-container')
 const left_instruction = $('#left-instruction')
 const right_instruction = $('#right-instruction')
 const inputRecipe = $('#input-find')
+const searchButton = $('#search-button')
+
+const loginButton = $('#login-btn')
+const userBtn = $('#user')
+let loginState = JSON.parse(localStorage.getItem('loginState')) || false
+
+
+
+function checkLogin()
+{
+        if(loginState)
+        {
+            loginButton.classList.add('active')
+            userBtn.classList.add('active')
+        }else
+        {
+            loginButton.classList.remove('active')
+            userBtn.classList.remove('active')
+        }
+}
+checkLogin()
+
+
+if(userBtn)
+{
+    userBtn.addEventListener('click', ()=>
+    {
+       if(confirm('Log out?'))
+       {
+            localStorage.setItem('loginState', JSON.stringify(loginState=false))
+            checkLogin()
+       }
+    })
+}
 
 document.body.addEventListener('keydown', ()=>
 {
     inputRecipe.focus()
 })
+
+
+if(inputRecipe)
+{
+    inputRecipe.addEventListener('keydown', (e)=>
+        {
+            if(e.key === 'Enter')
+            {
+                if(inputRecipe.value != '')
+                {
+                    localStorage.setItem('searchValue', JSON.stringify(inputRecipe.value))
+                    window.location.href = '../html/recipe_search.html'
+                }
+            }
+        })        
+}
+
+if(searchButton)
+{
+    searchButton.addEventListener('click', ()=>
+    {
+        if(inputRecipe && inputRecipe.value != '')
+        {
+            localStorage.setItem('searchValue', JSON.stringify(inputRecipe.value))
+            window.location.href = '../html/recipe_search.html'
+        }
+    })
+}
+
+
 
 
 
@@ -209,7 +274,7 @@ async function showRecipe()
             }
                 
             localStorage.setItem('recipeName', JSON.stringify(recipeName))
-            window.location.href = '../html/recipeInfo.html'
+            window.location.href = '../html/recipe_info.html'
             // console.log(recipeName);
         })
    }

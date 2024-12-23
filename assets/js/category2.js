@@ -29,7 +29,38 @@ const instruction_container = $('.instruction-container')
 const left_instruction = $('#left-instruction')
 const right_instruction = $('#right-instruction')
 
+const loginButton = $('#login-btn')
+const userBtn = $('#user')
+let loginState = JSON.parse(localStorage.getItem('loginState')) || false
 
+
+
+function checkLogin()
+{
+        if(loginState)
+        {
+            loginButton.classList.add('active')
+            userBtn.classList.add('active')
+        }else
+        {
+            loginButton.classList.remove('active')
+            userBtn.classList.remove('active')
+        }
+}
+checkLogin()
+
+
+if(userBtn)
+{
+    userBtn.addEventListener('click', ()=>
+    {
+       if(confirm('Log out?'))
+       {
+            localStorage.setItem('loginState', JSON.stringify(loginState=false))
+            checkLogin()
+       }
+    })
+}
 
 
 
@@ -115,7 +146,7 @@ async function showRecipe()
             }
                 
             localStorage.setItem('recipeNameHome', JSON.stringify(recipeNameHome))
-            window.location.href = '../html/singleRecipeInfo.html'
+            window.location.href = '../html/single_recipe.html'
             // console.log(recipeName);
         })
    }

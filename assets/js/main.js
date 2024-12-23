@@ -1,3 +1,6 @@
+
+
+
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
@@ -19,6 +22,7 @@ const categoryNameHome = []
 const loginButton = $('#login-btn')
 const userBtn = $('#user')
 let loginState = JSON.parse(localStorage.getItem('loginState')) || false
+
 
 function checkLogin()
 {
@@ -56,13 +60,13 @@ nav_tabs.forEach((tab, index)=>
     localStorage.setItem('recipeName', JSON.stringify([" "]))
     localStorage.setItem('categoryNameHome', JSON.stringify([]))
     localStorage.setItem('recipeNameHome', JSON.stringify([" "]))
+    
 
     tab.addEventListener('click', function()
     {
         $('.nav-tab.active').classList.remove('active')
         
         this.classList.add('active')
-
     })
 })
 
@@ -207,7 +211,7 @@ async function showRecipeInHome3()
                 }
                 localStorage.setItem('recipeNameHome', JSON.stringify(recipeNameHome))
                 localStorage.setItem('categoryNameHome', JSON.stringify(categoryNameHome))
-                window.location.href = './assets/html/singleRecipeInfo.html'
+                window.location.href = './assets/html/single_recipe.html'
             })
             
             
@@ -228,5 +232,4 @@ async function showRecipeInHome3()
 
 
 showRecipeInHome3()
-
 
